@@ -12,6 +12,7 @@ LABEL "maintainer"="Jacob Lowe"
 RUN  apt-get update \
      # See https://crbug.com/795759
      && apt-get install -yq libgconf-2-4 \
+     && apt-get install fonts-indic \
      # Install latest chrome dev package, which installs the necessary libs to
      # make the bundled version of Chromium that Puppeteer installs work.
      && apt-get install -y wget xvfb --no-install-recommends \
